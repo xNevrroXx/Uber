@@ -1,0 +1,275 @@
+.xl-more-visible
+    display: flex
+.lg-less-visible
+    display: none
+.md-more-visible
+	display: block
+.sm-less-visible
+	display: none
+.xs-hidden
+    display: block
+
+@media (max-width: 1399px)
+    .menu
+        &_item:nth-of-type(-n+5)
+            padding-right: 32px
+
+@media (max-width: 1199px)
+    .menu
+        &_link
+            font-size: 11px
+    .promo
+        &_title
+            font-size: 50px
+    .advantages
+        &_reasons_block
+                align-items: flex-start
+        &_reason
+            width: 300px
+    .mobile
+        .mobile_first_row > .col-md-6:nth-of-type(-n+4)
+            margin-bottom: 19px
+        .lg-less-visible
+            display: flex
+        .xl-more-visible
+            display: none
+    .footer
+        &_links
+            width: 100%
+            &_main a
+                font-size: 14px
+            &_sub a
+                font-size: 10px
+            &_lang a
+                font-size: 10px
+        &_application_links
+            width: 80%
+            .footer_store_icons a img
+                width: 95%
+
+@media (max-width: 991px)
+    .menu
+        &_item:nth-of-type(-n+5)
+            padding-right: 6px
+    .subheader
+        &_logo img
+            width: 100%
+        &_phone
+            font-size: 20px
+        &_btn
+            width: 100%
+    .promo
+        &_title
+            font-size: 41px 
+    .advantages
+        &_reasons_block
+            align-items: center
+            justify-content: center
+            flex-direction: column
+            margin-bottom: 35px
+        &_img_wrapper
+            margin-bottom: 15px
+            margin-right: 0
+    .footer
+        &_wrapper
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            & > div
+                width: 52%
+            & > div:nth-of-type(1)
+                order: 2
+                margin-bottom: 15px
+                .footer_social_network_icons
+                    margin: 0 auto
+            & > div:nth-of-type(2)
+                order: 1    
+                margin-bottom: 15px
+                .footer_links_main a
+                    font-size: 15px
+                .footer_links_sub a
+                    font-size: 11px
+            & > div:nth-of-type(3)
+                justify-content: center
+                order: 3
+        
+@media (max-width: 767px)
+    .menu
+        position: fixed
+        top: 0
+        left: -100%
+        width: 60%
+        height: 100vh
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+        background-color: rgba(0, 0, 0, .8)
+        transition: 0.6s all
+        &_active
+            left: 0
+        &_item
+            display: block
+            width: 100%
+        &_item:nth-of-type(-n+5)
+            padding-right: 0
+            margin-bottom: 34px
+            border: none
+        &_link
+            display: block
+            width: 100%
+            padding: 0
+            font-size: 17px
+    .hamburger
+        display: block
+        position: absolute
+        right: 20px
+        top: 50%
+        width: 25px
+        transform: translateY(-50%)
+        height: 12px
+        span
+            display: block
+            background-color: white
+            width: 100%
+            height: 2px
+            transition: .5s all 
+            &:nth-of-type(-n+2)
+                margin-bottom: 3px
+        &_active
+            span
+                &:first-of-type
+                    border-radius: 80%
+                    transform: rotateZ(-30deg) scale(.8) translateX(-1.8px)
+                &:nth-of-type(2)
+                    border-radius: 80%
+                    transform: rotateZ(90deg) scale(.78) translateY(-8px)
+                &:nth-of-type(3)
+                    border-radius: 80%
+                    transform: rotateZ(30deg) scale(.8) translateX(-1.8px)
+    .subheader
+        .md-more-visible
+            display: none
+        .sm-less-visible
+            display: block
+        &_logo
+            img
+                padding-top: 10px
+        &_phone
+            color: #ffffff
+            font-size: 15px
+            font-weight: 300
+            text-align: center
+            text-transform: uppercase
+            margin-bottom: 8px
+        &_btn
+            display: block
+            margin: 0 auto
+            width: 185px
+            height: 25px
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
+            color: #ffffff
+            font-size: 10px
+            font-weight: 300
+            text-align: center
+            text-transform: uppercase
+    .promo_btn
+        width: 205px
+        height: 51px
+    .title
+        font-size: 31px 
+    .advantages
+        &_reason
+            width: 100%
+        .row > div
+            &:nth-of-type(-n+7)
+                margin-bottom: 10px
+    .mobile
+        .mobile_first_row > .col-md-6:nth-last-of-type(2)
+            margin-bottom: 19px
+    .opportunities
+        &_img_car
+            img
+                width: 100%
+    .footer
+        &_wrapper
+            > div
+                width: 100%
+                .footer_application_links
+                    width: 336px
+        &_links
+            width: 355px
+
+@media (max-width: 565px)
+    header
+        height: 30px
+    nav
+        height: 30px
+    .menu
+        width: 85%
+        padding-left: 21%
+        padding-right: 21%
+        &_link
+            font-size: 12px
+    .subheader
+        top: 30px
+        height: 60px
+        padding-top: 10px
+        padding-bottom: 9px
+        &_logo
+            img
+                padding-top: 12px
+        &_phone
+            font-size: 12px
+            margin-bottom: 7px
+        &_btn
+            width: 80%
+            height: 22px
+    .promo
+        padding-top: 112px
+        padding-bottom: 35px
+        min-height: 400px
+        .xs-hidden
+            display: none
+        &_title
+            display: block
+            margin: 0 auto
+            width: 264px
+            font-size: 30px
+            line-height: normal
+            margin-bottom: 33px
+        &_invitation
+            display: block
+            margin: 0 auto
+            width: 264px
+            font-size: 20px
+            margin-bottom: 72px
+            font-weight: 300
+            line-height: normal
+    .opportunities
+        &_subpromo
+            width: 100%
+    .footer
+        .divider
+            width: 253px
+            margin-bottom: 22px
+        &_links
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            width: 281px
+            &_main
+                font-size: 14px
+                margin-bottom: 13px
+            &_sub
+                width: 244px
+                font-size: 11px
+                margin-bottom: 13px
+                flex-wrap: wrap
+                a:nth-of-type(-n+2)
+                    margin-bottom: 13px
+
+@media (max-width: 399px)
+    .mobile
+        .mobile_card_wrapper
+            width: 95%
